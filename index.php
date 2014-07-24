@@ -1,5 +1,21 @@
 <?php
 	// @todo Super array goes here
+	$est = array(
+		'2014' => array(
+			array('title'=>'Irvine', 'prefix'=>'University of California'),
+			array('title'=>'Santa Barbara', 'prefix'=>'University of California'),
+			array('title'=>'Southern California', 'prefix'=>'University of'),
+			array('title'=>'Pomona', 'prefix'=>'Cal Poly')
+		),
+		'2013' => array(
+			array('title'=>'Los Angeles', 'prefix'=>'University of California')
+		)
+	);
+
+	//echo count($est);
+	foreach($est as $key => $value) {
+		echo $key . '<br />';
+	}
 ?>
 
 <!DOCTYPE html>
