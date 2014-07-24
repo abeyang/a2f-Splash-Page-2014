@@ -1,0 +1,10 @@
+// styles.scss
+
+@import 'bourbon/bourbon';
+
+.temp {
+	height: 400px;
+	width: 600px;
+	margin: 10px auto;
+	@include linear-gradient(to top, red, orange);
+}
