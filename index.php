@@ -1,7 +1,7 @@
 <?php
 	$meta = array(
 		'desc' => "acts2fellowship is a Christian college fellowship with chapters in UC Berkeley, UC Los Angeles, University of Southern California, UC Irvine, UC Riverside, Cal State Pomona, UC San Diego, San Diego State University, UC Santa Barbara, University of Minnesota.",
-		'keywords' => "berkeley, los angeles, la, southern california, sc, irvine, riverside, pomona, cpp, san diego, sd, minnesota, college, christian fellowship"
+		'keywords' => "berkeley, los angeles, la, southern california, sc, irvine, riverside, pomona, cpp, san diego, sd, minnesota, college campus, christian fellowship, bible study"
 	);
 
 	$est = array(
@@ -33,8 +33,8 @@
 			array(
 				'title'=>'Southern California', 
 				'prefix'=>'University of', 
-				'website'=>'https://www.facebook.com/Acts2FellowshipUSC', 
-				'facebook'=>'', 
+				'website' => 'http://acts2fellowship.org/usc',
+				'facebook'=>'https://www.facebook.com/Acts2FellowshipUSC', 
 				'photo'=>'https://farm4.staticflickr.com/3918/14999363919_7d9dd96f15_k.jpg',
 				'offset' => 'top2'
 			),
@@ -42,7 +42,7 @@
 				'title'=>'Pomona', 
 				'prefix'=>'Cal Poly', 
 				'website'=>'http://acts2fellowship.org/pomona/', 
-				'facebook'=>'', 
+				'facebook'=>'http://www.facebook.com/a2fcalpolypomona', 
 				'photo'=>'https://farm4.staticflickr.com/3915/14801153827_c1c4153f48_k.jpg',
 				'offset' => 'top1'
 			)
@@ -126,7 +126,7 @@
 
 	</script>
 
-	<title>Welcome to acts2fellowship</title>
+	<title>acts2fellowship | Christian Fellowship on College Campus</title>
   
 </head>
 
@@ -163,7 +163,7 @@
 			<hr />
 			<p class="description">
 				We're a Christian fellowship, a home-away-from-home, a place to forge life-long friendships and learn more about God.
-				<br />We may be at a college campus near you!
+				<br />Check us out at a college campus near you!
 			</p>
 			<img src='https://farm3.staticflickr.com/2910/14694528234_31fc45754d_k.jpg'>
 			
