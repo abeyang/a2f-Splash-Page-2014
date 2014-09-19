@@ -43,7 +43,7 @@ p {
 }
 
 body {
-  background: #ff9249;
+  background-color: #111111;
   padding: 0;
   margin: 0;
 }
@@ -51,73 +51,70 @@ body {
 .container {
   width: 950px;
   margin: 0 auto 0 0;
-  font-family: sans-serif;
 }
 
-.sidebar {
-  /* @todo change height */
-  height: 3210px;
+aside {
   width: 25%;
   float: left;
-  background-color: #111111;
 }
-.sidebar .box {
+aside .box {
   padding-left: 20px;
   padding-bottom: 15px;
 }
-.sidebar .year {
+aside .year {
   font-size: 14px;
   font-weight: bold;
   color: #444444;
   margin: 15px 0px;
 }
-.sidebar .prefix {
+aside .prefix {
   font-size: 16px;
   color: #666666;
   margin: 0px;
 }
-.sidebar .title {
+aside .title {
   font-size: 21px;
   color: white;
   margin: 2px 0px 15px 0px;
 }
-.sidebar .logo {
-  height: 180px;
+aside .logo {
+  height: 200px;
+  background: url(../images/a2f_logo.png) center center no-repeat;
 }
 
-.content {
-  width: 70%;
-  float: left;
+section {
+  width: 75%;
+  margin-left: 25%;
   text-align: center;
   text-transform: uppercase;
   color: white;
 }
-.content .box {
+section .box {
   border: none;
   background-color: #471437;
 }
 
 .box {
   width: 100%;
-  float: left;
   overflow: hidden;
   position: relative;
   border-top: 1px solid #222222;
 }
 .box img {
   opacity: 0.9;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 .box hr, .box .button {
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 .box:hover .slide {
-  bottom: -80px;
+  bottom: -180px;
 }
 .box:hover img {
   /* @todo on-hover, image needs to zoom in a bit */
-  /*max-width: 125%;*/
+  width: 104%;
+  left: -2%;
   opacity: 0.25;
 }
 .box:hover hr, .box:hover .button {
@@ -134,7 +131,7 @@ body {
   position: relative;
 }
 .banner img {
-  top: -60%;
+  top: -100%;
   z-index: -10;
 }
 .banner .description {
@@ -144,10 +141,10 @@ body {
 }
 
 .slide {
-  height: 300px;
+  height: 400px;
   position: relative;
-  bottom: -180px;
-  transition: all 0.5s ease-in-out;
+  bottom: -280px;
+  transition: all 0.5s ease;
 }
 .slide .cover {
   padding-top: 10px;
@@ -170,10 +167,17 @@ body {
 }
 
 img {
-  max-width: 110%;
+  width: 100%;
+  height: auto;
   position: absolute;
-  top: -33%;
-  left: -5%;
+  top: -30%;
+  left: 0%;
+}
+img.top1 {
+  top: -50%;
+}
+img.top2 {
+  top: -75%;
 }
 
 a {
