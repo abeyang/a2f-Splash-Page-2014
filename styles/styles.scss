@@ -10,8 +10,10 @@ $gray-dark: #444;
 $gray-darker: #222;
 $white: #FFF;
 $orange: #FF9249;
-$purple: rgba(71, 20, 55, 0.5);
+$purple: #471437;
 $red: #FF5449;
+
+$transition: all 0.5s ease-in-out;
 
 /*General*/
 
@@ -19,19 +21,38 @@ body, div, p, h1, h2, h3, h4, h5, h6 {
 	font-family: "Source Sans Pro", helvetica, arial, sans-serif;
 }
 
-body {
-	background: $orange;
-	padding: 0;
+h1, h2, h3 { 
+	color: $white; 
+	text-transform: uppercase; 
+}
+h2, h3 {  }
+
+h1 { font-size: 30px; }
+h2 { 
+	margin-top: -5px;
+	margin-bottom: 10px;
+	font-size: 36px; 
+}
+h3 { 
 	margin: 0;
+	font-size: 16px; 
+	font-weight: 400;
 }
 
 hr {
 	width: 28px;
 	height: 4px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	background-color: $white;
 	border: none;
+}
 
+p { font-size: 14px; }
+
+body {
+	background: $orange;
+	padding: 0;
+	margin: 0;
 }
 
 .container {
@@ -41,32 +62,34 @@ hr {
 }
 
 .sidebar {
+	/* @todo change height */
 	height: 3210px;
 	width: 25%;
 	float: left;
 	background-color: $black;
 
+	.box {
+		padding-left: 20px;
+		padding-bottom: 15px;
+	}
+
 	.year {
 		font-size: 14px;
 		font-weight: bold;
 		color: $gray-dark;
-		padding: 0px 20px;
 		margin: 15px 0px;
 	}
 
 	.prefix {
-		font-size: 14px;
-		font-weight: bold;
+		font-size: 16px;
 		color: $gray-light;
-		padding: 0px 20px;
 		margin: 0px;
 	}
 
 	.title {
-		font-size: 18px;
+		font-size: 21px;
 		color: $white;
-		padding: 0px 20px;
-		margin: 0px 0px 15px 0px;
+		margin: 2px 0px 15px 0px;
 	}
 
 	.logo {
@@ -83,7 +106,7 @@ hr {
 
 	.box {
 		border: none;
-		background-color: $red;
+		background-color: $purple;
 	}
 }
 
@@ -93,6 +116,26 @@ hr {
 	overflow: hidden;
 	position: relative;
 	border-top: 1px solid $gray-darker;
+
+	img {
+		opacity: 0.9;
+		transition: $transition;
+	}
+	hr, .button { 
+		opacity: 0; 
+		transition: $transition;
+	}
+
+	&:hover {
+		.slide { bottom: -80px; }
+		img { 
+			/* @todo on-hover, image needs to zoom in a bit */
+			/*max-width: 125%;*/
+			opacity: 0.25; 
+		}
+		hr, .button { opacity: 1; }
+		.coming-soon { background: $red; }
+	}
 }
 
 .banner {
@@ -103,58 +146,26 @@ hr {
 
 	img {
 		top: -60%;
-	}
-
-	h2 {
-		position: absolute;
-		top: 15%;
-		left: 0;
-		right: 0;
+		z-index: -10;
 	}
 
 	.description {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		right: 0;
+		width: 50%;
+		margin: 0 auto;
 		text-transform: none;
-		font-size: 14px;
-		padding: 0px 150px;
 	}
 }
 
 .slide {
 	height: 300px;
-	background-color: rgba(255,255,255,0);
 	position: relative;
-	bottom: -140px;
-	transition: all 0.5s ease;
+	bottom: -180px;
+	transition: $transition;
 
-	.prefix {
-		position: absolute;
-		top: 25%;
-		left: 0;
-		right: 0;
-		font-size: 14px;
-	}
-
-	.title {
-		position: absolute;
-		top: 21%;
-		left: 0;
-		right: 0;
-		font-weight: bold;
-		font-size: 40px;
-	}
+	.cover { padding-top: 10px ; }
 }
 
-.box:hover .slide {
-	position: relative;
-	bottom: 0;
-	background-color: $purple;
-}
-
-.Button {
+.button {
 	width: 130px;
 	border-radius: 20px;
 	border: 1px solid $orange;
@@ -163,9 +174,10 @@ hr {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 25%;
-
-	&.Website {
+	
+	/* @todo technically not correct -- only when there are 2 buttons will we have margin-right */
+	/* maybe use nth-child(2) - margin-left? */
+	&.website {
 		margin-right: 20px;
 	}
 }
@@ -173,7 +185,7 @@ hr {
 img {
 	max-width: 110%;
 	position: absolute;
-	top: -35%;
+	top: -33%;
 	left: -5%;
 }
 
@@ -185,10 +197,6 @@ a {
 .coming-soon {
 	width: 100%;
 	height: 100%;
-}
-
-.box:hover .coming-soon {
-	background: $red;
 }
 
 .coming-soon p {

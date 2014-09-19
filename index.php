@@ -114,6 +114,7 @@
 					<?php	
 					foreach($church as $value) {
 					?>
+						<!-- @todo need to properly hash it; create function	 -->
 						<a href="#<?php echo $value['Prefix']?><?php echo $value['Title']?>">
 							<p class="prefix"><?php echo $value['Prefix']?></p>
 							<p class="title"><?php echo $value['Title']?></p>
@@ -130,10 +131,12 @@
 
 	<section class="content">
 			<div class="banner">
-				<img src='https://farm3.staticflickr.com/2910/14694528234_31fc45754d_k.jpg'>
-				<h2>ACT2FELLOWSHIP</h2>
+				<h1>Acts2Fellowship</h1>
 				<hr />
+				<!-- @todo need real content -->
 				<p class="description">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis laboris nisi ut aliquip ex ea commodo. Duis irure dolor in reprehenderit voluptate .</p>
+				<img src='https://farm3.staticflickr.com/2910/14694528234_31fc45754d_k.jpg'>
+				
 			</div>
 			<?php
 			foreach($est as $year => $church) {
@@ -142,14 +145,17 @@
 					<div class="box" id="<?php echo $value['Prefix']?><?php echo $value['Title']?>">
 						<img src="<?php echo $value['Photo']?>">
 						<div class="slide">
-							<p class="prefix"><?php echo $value['Prefix']?></p>
-							<p class="title"><?php echo $value['Title']?></p>	
+							<div class="cover">
+								<h3><?php echo $value['Prefix']?></h3>
+								<h2><?php echo $value['Title']?></h2>
+							</div>
+							<hr />
 							
 							<?php
 							if (!empty($value['Website'])) {
 							?>
 								<a href="<?php echo $value['Website']?>">
-								<div class="Button Website">
+								<div class="button website">
 									Visit Website
 								</div>
 								</a>
@@ -164,7 +170,7 @@
 							if (!empty($value['Facebook'])) {
 							?>
 								<a href="<?php echo $value['Facebook']?>">
-								<div class="Button Facebook">
+								<div class="button facebook">
 									Visit Facebook
 								</div>
 								</a>
