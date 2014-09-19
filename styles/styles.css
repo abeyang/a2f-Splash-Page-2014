@@ -224,13 +224,15 @@ img.top2 {
   }
 
   img {
-    top: 0%;
+    top: -10%;
+    left: -10%;
+    width: 120%;
   }
   img.top1 {
-    top: -10%;
+    top: -30%;
   }
   img.top2 {
-    top: -20%;
+    top: -40%;
   }
 
   .slide {

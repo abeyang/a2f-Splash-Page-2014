@@ -225,10 +225,12 @@ img {
     }
 
     img {
-    	top: 0%;
+    	top: -10%;
+    	left: -10%;
+    	width: 120%;
 
-    	&.top1 { top: -10%; }
-    	&.top2 { top: -20%; }
+    	&.top1 { top: -30%; }
+    	&.top2 { top: -40%; }
     }
 
     .slide { 
