@@ -109,10 +109,9 @@ section .box {
   transition: all 0.5s ease;
 }
 .box:hover .slide {
-  bottom: -180px;
+  bottom: -130px;
 }
 .box:hover img {
-  /* @todo on-hover, image needs to zoom in a bit */
   width: 104%;
   left: -2%;
   opacity: 0.25;
@@ -196,4 +195,111 @@ a {
   font-size: 30px;
   padding: 5px;
   border: 3px solid white;
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  /* Styles for phone */
+  aside {
+    display: none;
+  }
+
+  .banner img {
+    top: -30%;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  img {
+    top: 0%;
+  }
+  img.top1 {
+    top: -10%;
+  }
+  img.top2 {
+    top: -20%;
+  }
+
+  .slide {
+    height: 200px;
+    bottom: -100px;
+  }
+
+  .box:hover .slide {
+    bottom: -30px;
+  }
+}
+@media (min-width: 640px) and (max-width: 839px) {
+  /* Styles for phone / tablet */
+  aside {
+    display: none;
+  }
+
+  .banner img {
+    top: -80%;
+  }
+
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .slide {
+    height: 250px;
+    bottom: -150px;
+  }
+
+  .box:hover .slide {
+    bottom: -50px;
+  }
+}
+@media (min-width: 840px) and (max-width: 1023px) {
+  /* Styles for tablet */
+  .slide {
+    height: 300px;
+    bottom: -200px;
+  }
+
+  .box:hover .slide {
+    bottom: -80px;
+  }
+
+  img {
+    top: -20%;
+  }
+  img.top1 {
+    top: -30%;
+  }
+  img.top2 {
+    top: -40%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1400px) {
+  /* Styles for smaller laptop */
+  .slide {
+    height: 350px;
+    bottom: -200px;
+  }
+
+  .box:hover .slide {
+    bottom: -80px;
+  }
+
+  img {
+    top: -20%;
+  }
+  img.top1 {
+    top: -30%;
+  }
+  img.top2 {
+    top: -40%;
+  }
+}
+@media (-webkit-min-pixel-ratio: 1.5) {
+  /* Don't forget your Retina CSS! */
+  body {
+    background-size: 72px 72px;
+  }
 }

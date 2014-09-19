@@ -19,7 +19,7 @@
 				'prefix'=>'State University', 
 				'website'=>'http://www.a2fsdsu.org/#upcomingevents', 
 				'facebook'=>'https://www.facebook.com/acts2fellowshipSDSU', 
-				'photo'=>'https://farm3.staticflickr.com/2936/14818701422_b3e9eddc5b_b.jpg',
+				'photo'=>'https://farm4.staticflickr.com/3901/14943968890_d38176475d_k.jpg',
 				'offset' => 'top2'
 			),
 			array(
@@ -27,14 +27,15 @@
 				'prefix'=>'University of California', 
 				'website'=>'http://ucsb.acts2fellowship.org/', 
 				'facebook'=>'', 
-				'photo'=>'http://static.squarespace.com/static/53dd32e1e4b071b54b32e25d/53dd49e6e4b0a3c5cce97c4f/53e08263e4b0bb7c9aed60e0/1407222385877/_C8A2403.jpg?format=1500w'
+				'photo'=>'https://farm4.staticflickr.com/3873/15182180071_46f887453a_k.jpg',
+				'offset' => 'top1'
 			),
 			array(
 				'title'=>'Southern California', 
 				'prefix'=>'University of', 
 				'website'=>'https://www.facebook.com/Acts2FellowshipUSC', 
 				'facebook'=>'', 
-				'photo'=>'https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10350414_1484525938458279_1555376737777208468_n.jpg?oh=1c574827c1d78c82be2f0de11f57497e&oe=547805A6&__gda__=1417654937_29bcbd593213321c4e46fab3dee41fa4',
+				'photo'=>'https://farm4.staticflickr.com/3918/14999363919_7d9dd96f15_k.jpg',
 				'offset' => 'top2'
 			),
 			array(
@@ -87,7 +88,8 @@
 				'prefix'=>'University of California', 
 				'website'=>'http://www.a2fberkeley.org/#welcome-to-acts2fellowship', 
 				'facebook'=>'https://www.facebook.com/acts2fellowship', 
-				'photo'=>'http://static.squarespace.com/static/53ad0b5be4b0d2cc9c8b21ca/53d73143e4b033bb6ba0aa02/53d73527e4b03739b8c7604e/1406612954719/14151054722_38f7cc930f_o.jpg?format=1000w'
+				'photo'=>'https://farm4.staticflickr.com/3878/15132433821_543cb8be13_k.jpg',
+				'offset' => 'top2'
 			)
 		)
 	);
@@ -100,7 +102,8 @@
 <head>
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" />
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
@@ -109,7 +112,19 @@
 	<meta name="description" content="<?php echo $meta['desc'] ?>" /> 
 	<meta name="keywords" content="<?php echo $meta['keywords'] ?>" />
 
-	<!-- @todo Need analytics tracker -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-97361-8']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 
 	<title>Welcome to acts2fellowship</title>
   
@@ -118,9 +133,8 @@
 <body>
 
 	<aside>
-		<div class="logo">
-			<!-- <h1>A2F</h1> -->
-		</div>
+		<!-- @todo need @2x logo / retina -->
+		<div class="logo">&nbsp;</div>
 			<?php
 			foreach($est as $year => $church) {
 			?>
