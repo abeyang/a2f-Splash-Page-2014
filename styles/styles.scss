@@ -4,23 +4,39 @@
 
 /*Variables*/
 
-$Black: #111;
-$ltGray: #666;
-$dkGray: #333;
-$White: #FFF;
-$Orange: #FF9249;
-$Purple: rgba(71, 20, 55, 0.5);
-$Red: #FF5449;
+$black: #111;
+$gray-light: #666;
+$gray-dark: #444;
+$gray-darker: #222;
+$white: #FFF;
+$orange: #FF9249;
+$purple: rgba(71, 20, 55, 0.5);
+$red: #FF5449;
 
 /*General*/
 
+body, div, p, h1, h2, h3, h4, h5, h6 {
+	font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+}
+
 body {
-	background: #333;
+	background: $orange;
+	padding: 0;
+	margin: 0;
+}
+
+hr {
+	width: 28px;
+	height: 4px;
+	margin: 0 auto;
+	background-color: $white;
+	border: none;
+
 }
 
 .container {
 	width: 950px;
-	margin: auto;
+	margin: 0 auto 0 0;
 	font-family: sans-serif;
 }
 
@@ -28,12 +44,12 @@ body {
 	height: 3210px;
 	width: 25%;
 	float: left;
-	background-color: $Black;
+	background-color: $black;
 
 	.year {
 		font-size: 14px;
 		font-weight: bold;
-		color: $dkGray;
+		color: $gray-dark;
 		padding: 0px 20px;
 		margin: 15px 0px;
 	}
@@ -41,14 +57,14 @@ body {
 	.prefix {
 		font-size: 14px;
 		font-weight: bold;
-		color: $ltGray;
+		color: $gray-light;
 		padding: 0px 20px;
 		margin: 0px;
 	}
 
 	.title {
 		font-size: 18px;
-		color: $White;
+		color: $white;
 		padding: 0px 20px;
 		margin: 0px 0px 15px 0px;
 	}
@@ -63,10 +79,11 @@ body {
 	float: left;
 	text-align: center;
 	text-transform: uppercase;
-	color: $White;
+	color: $white;
 
 	.box {
 		border: none;
+		background-color: $red;
 	}
 }
 
@@ -75,7 +92,7 @@ body {
 	float: left;
 	overflow: hidden;
 	position: relative;
-	border-top: 1px solid $dkGray;
+	border-top: 1px solid $gray-darker;
 }
 
 .banner {
@@ -134,13 +151,13 @@ body {
 .box:hover .slide {
 	position: relative;
 	bottom: 0;
-	background-color: $Purple;
+	background-color: $purple;
 }
 
 .Button {
 	width: 130px;
 	border-radius: 20px;
-	border: 1px solid $Orange;
+	border: 1px solid $orange;
 	text-transform: none;
 	padding: 5px;
 	display: inline-block;
@@ -162,7 +179,7 @@ img {
 
 a {
 	text-decoration: none;
-	color: $Orange;
+	color: $orange;
 }
 
 .coming-soon {
@@ -171,7 +188,7 @@ a {
 }
 
 .box:hover .coming-soon {
-	background: $Red;
+	background: $red;
 }
 
 .coming-soon p {
@@ -179,5 +196,5 @@ a {
 	margin-top: 25%;
 	font-size: 30px;
 	padding: 5px;
-	border: 3px solid $White;
+	border: 3px solid $white;
 }

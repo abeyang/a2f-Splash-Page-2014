@@ -1,11 +1,16 @@
 <?php
-	// @todo Super array goes here
+	$meta = array(
+		'desc' => "acts2fellowship is a Christian college fellowship with chapters in UC Berkeley, UC Los Angeles, University of Southern California, UC Irvine, UC Riverside, Cal State Pomona, UC San Diego, San Diego State University, UC Santa Barbara, University of Minnesota.",
+		'keywords' => "berkeley, los angeles, la, southern california, sc, irvine, riverside, pomona, cpp, san diego, sd, minnesota, college, christian fellowship"
+	);
+
+	// @todo add san diego state
 	$est = array(
 		'2014' => array(
 			array(
 				'Title'=>'Irvine', 
 				'Prefix'=>'University of California', 
-				'Website'=>'http://www.a2firvine.org/#landing', 
+				'Website'=>'http://www.a2firvine.org/', 
 				'Facebook'=>'', 
 				'Photo'=>'https://farm3.staticflickr.com/2924/14644552605_0681b0cc92_k.jpg'
 			),
@@ -30,7 +35,7 @@
 			array(
 				'Title'=>'Pomona', 
 				'Prefix'=>'Cal Poly', 
-				'Website'=>'', 
+				'Website'=>'http://acts2fellowship.org/pomona/', 
 				'Facebook'=>'', 
 				'Photo'=>'https://farm4.staticflickr.com/3915/14801153827_c1c4153f48_k.jpg')
 		),
@@ -86,6 +91,9 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link href="favicon.ico" rel="shortcut icon">
 
+	<meta name="description" content="<?php echo $meta['desc'] ?>" /> 
+	<meta name="keywords" content="<?php echo $meta['keywords'] ?>" />
+
 	<!-- @todo Need analytics tracker -->
 
 	<title>Welcome to acts2fellowship</title>
@@ -123,7 +131,8 @@
 	<section class="content">
 			<div class="banner">
 				<img src='https://farm3.staticflickr.com/2910/14694528234_31fc45754d_k.jpg'>
-				<h2>ACT2FELLOWSHIP<br>---</h2>
+				<h2>ACT2FELLOWSHIP</h2>
+				<hr />
 				<p class="description">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis laboris nisi ut aliquip ex ea commodo. Duis irure dolor in reprehenderit voluptate .</p>
 			</div>
 			<?php
