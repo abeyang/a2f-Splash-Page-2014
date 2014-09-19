@@ -62,7 +62,7 @@ aside {
   float: left;
 }
 aside .box {
-  padding-left: 20px;
+  padding-left: 10%;
   padding-bottom: 15px;
 }
 aside .year {
@@ -315,6 +315,35 @@ img.top2 {
   }
   img.top2 {
     top: -40%;
+  }
+}
+@media (min-width: 1800px) {
+  /* Styles for larger desktops */
+  aside .box {
+    padding-left: 20%;
+  }
+
+  .banner img {
+    top: -220%;
+  }
+
+  .slide {
+    height: 500px;
+    bottom: -360px;
+  }
+
+  .box:hover .slide {
+    bottom: -180px;
+  }
+
+  img {
+    top: -40%;
+  }
+  img.top1 {
+    top: -60%;
+  }
+  img.top2 {
+    top: -85%;
   }
 }
 @media (-webkit-min-pixel-ratio: 1.5) {

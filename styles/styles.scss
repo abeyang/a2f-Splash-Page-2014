@@ -69,7 +69,7 @@ aside {
 	float: left;
 	
 	.box {
-		padding-left: 20px;
+		padding-left: 10%;
 		padding-bottom: 15px;
 	}
 
@@ -295,6 +295,24 @@ img {
 
     	&.top1 { top: -30%; }
     	&.top2 { top: -40%; }
+    }
+}
+
+@media (min-width: 1800px) {
+    /* Styles for larger desktops */
+    aside .box { padding-left: 20%; }
+    .banner img { top: -220%; }
+    .slide { 
+    	height: 500px; 
+    	bottom: -360px;
+    }
+    .box:hover .slide { bottom: -180px; }
+
+    img {
+    	top: -40%;
+
+    	&.top1 { top: -60%; }
+    	&.top2 { top: -85%; }
     }
 }
 
