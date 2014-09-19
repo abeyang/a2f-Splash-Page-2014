@@ -184,11 +184,7 @@
 						<?php
 						if (!empty($value['website'])) {
 						?>
-							<a href="<?php echo $value['website']?>">
-							<div class="button website">
-								Visit website
-							</div>
-							</a>
+							<a href="<?php echo $value['website']?>" class="button website">Visit Website</a>
 						<?php
 						} else {
 						?>
@@ -199,11 +195,7 @@
 						}
 						if (!empty($value['facebook'])) {
 						?>
-							<a href="<?php echo $value['facebook']?>">
-							<div class="button facebook">
-								Visit facebook
-							</div>
-							</a>
+							<a href="<?php echo $value['facebook']?>" class="button facebook">Visit Facebook</a>
 						<?php
 						}
 						?>

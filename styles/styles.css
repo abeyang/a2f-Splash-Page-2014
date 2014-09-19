@@ -42,6 +42,10 @@ p {
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #111111;
   padding: 0;
@@ -150,19 +154,20 @@ section .box {
 }
 
 .button {
+  display: inline-block;
   width: 130px;
   border-radius: 20px;
   border: 1px solid #ff9249;
+  padding: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
   text-transform: none;
-  padding: 5px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  /* @todo technically not correct -- only when there are 2 buttons will we have margin-right */
-  /* maybe use nth-child(2) - margin-left? */
+  color: #ff9249;
+  transition: all 0.5s ease;
 }
-.button.website {
-  margin-right: 20px;
+.button:hover {
+  color: white;
+  background-color: #ff9249;
 }
 
 img {
@@ -179,11 +184,6 @@ img.top2 {
   top: -75%;
 }
 
-a {
-  text-decoration: none;
-  color: #ff9249;
-}
-
 .coming-soon {
   width: 100%;
   height: 100%;
@@ -197,14 +197,25 @@ a {
   border: 3px solid white;
 }
 
-@media (min-width: 320px) and (max-width: 639px) {
+@media (min-width: 100px) and (max-width: 639px) {
   /* Styles for phone */
+  h1, h2 {
+    font-size: 24px;
+  }
+
+  hr {
+    display: none;
+  }
+
   aside {
     display: none;
   }
 
   .banner img {
     top: -30%;
+  }
+  .banner .description {
+    width: 80%;
   }
 
   section {
@@ -224,11 +235,18 @@ a {
 
   .slide {
     height: 200px;
-    bottom: -100px;
+    bottom: -20px;
   }
 
+  .box .button {
+    opacity: 1;
+    width: 40%;
+    margin-top: 50px;
+    background-color: rgba(255, 146, 73, 0.8);
+    color: white;
+  }
   .box:hover .slide {
-    bottom: -30px;
+    bottom: -20px;
   }
 }
 @media (min-width: 640px) and (max-width: 839px) {

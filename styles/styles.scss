@@ -10,6 +10,7 @@ $gray-dark: #444;
 $gray-darker: #222;
 $white: #FFF;
 $orange: #FF9249;
+$orange-glass: rgba(255,146,73,0.8);
 $purple: #471437;
 $red: #FF5449;
 
@@ -49,6 +50,8 @@ hr {
 }
 
 p { font-size: 14px; }
+
+a { text-decoration: none; }
 
 body {
 	background-color: $black;
@@ -163,19 +166,20 @@ section {
 }
 
 .button {
+	display: inline-block;
 	width: 130px;
 	border-radius: 20px;
 	border: 1px solid $orange;
+	padding: 7px;
+	margin-left: 7px;
+	margin-right: 7px;
 	text-transform: none;
-	padding: 5px;
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
+	color: $orange;
+	transition: $transition;
 	
-	/* @todo technically not correct -- only when there are 2 buttons will we have margin-right */
-	/* maybe use nth-child(2) - margin-left? */
-	&.website {
-		margin-right: 20px;
+	&:hover {
+		color: $white;
+		background-color: $orange;
 	}
 }
 
@@ -188,11 +192,6 @@ img {
 
 	&.top1 { top: -50%; }
 	&.top2 { top: -75%; }
-}
-
-a {
-	text-decoration: none;
-	color: $orange;
 }
 
 .coming-soon {
@@ -210,10 +209,16 @@ a {
 
 // MEDIA QUERIES
 
-@media (min-width: 320px) and (max-width: 639px) {
+@media (min-width: 100px) and (max-width: 639px) {
 	/* Styles for phone */
+	h1, h2 { font-size: 24px; }
+	hr { display: none; }
+	
     aside { display: none; }
-    .banner img { top: -30%; }
+    .banner {
+    	img { top: -30%; }
+    	.description { width: 80%; }
+    }
     section {
     	width: 100%;
     	margin-left: 0;
@@ -228,9 +233,19 @@ a {
 
     .slide { 
     	height: 200px; 
-    	bottom: -100px;
+    	bottom: -20px;
     }
-    .box:hover .slide { bottom: -30px; }
+
+    .box {
+    	.button { 
+    		opacity: 1;
+    		width: 40%; 
+    		margin-top: 50px;
+    		background-color: $orange-glass;
+    		color: $white;
+    	}
+    	&:hover .slide { bottom: -20px; }
+    }
 }
 
 @media (min-width: 640px) and (max-width: 839px) {
