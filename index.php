@@ -27,8 +27,7 @@
 				'prefix'=>'University of California', 
 				'website'=>'http://ucsb.acts2fellowship.org/', 
 				'facebook'=>'', 
-				'photo'=>'https://farm4.staticflickr.com/3873/15182180071_46f887453a_k.jpg',
-				'offset' => 'top1'
+				'photo'=>'images/ucsb.jpg'
 			),
 			array(
 				'title'=>'Southern California', 
@@ -43,8 +42,7 @@
 				'prefix'=>'Cal Poly', 
 				'website'=>'http://acts2fellowship.org/pomona/', 
 				'facebook'=>'http://www.facebook.com/a2fcalpolypomona', 
-				'photo'=>'https://farm4.staticflickr.com/3915/14801153827_c1c4153f48_k.jpg',
-				'offset' => 'top1'
+				'photo'=>'images/cpp.jpg'
 			)
 		),
 		'2013' => array(
