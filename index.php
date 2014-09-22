@@ -68,8 +68,8 @@
 				'prefix'=>'University of California', 
 				'website'=>'http://www.acts2fellowship.org/riverside/', 
 				'facebook'=>'https://www.facebook.com/a2friverside', 
-				'photo'=>'https://farm8.staticflickr.com/7164/13987907292_fd2afa61d4_k.jpg',
-				'offset' => 'top1'
+				'photo'=>'images/ucr.jpg',
+				'offset' => 'top2'
 			),
 			array(
 				'title'=>'San Diego', 
