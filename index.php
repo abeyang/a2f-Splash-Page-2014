@@ -10,8 +10,8 @@
 				'title'=>'Irvine', 
 				'prefix'=>'University of California', 
 				'website'=>'http://www.a2firvine.org/', 
-				'facebook'=>'', 
-				'photo'=>'https://farm3.staticflickr.com/2924/14644552605_0681b0cc92_k.jpg',
+				'facebook'=>'https://www.facebook.com/a2firvine', 
+				'photo'=>'images/uci.jpg',
 				'offset' => 'top1'
 			),
 			array(
